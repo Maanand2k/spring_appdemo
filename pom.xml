@@ -8,12 +8,16 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.nic</groupId>
+
+	<groupId>io.github.maanand2k</groupId>
 	<artifactId>spring_appdemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>spring_appdemo</name>
-	<description>Demo project for Spring Boot</description>
+
+	<name>Spring Boot Library for Postgres</name>
+	<description>This is sample Library for Connecting with Postgres</description>
+	<url>http://github.com/Maanand2k/spring_appdemo</url>
+
 	<properties>
 		<java.version>14</java.version>
 	</properties>
@@ -61,6 +65,63 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-api</artifactId>
+    <version>0.11.1</version>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-impl</artifactId>
+    <version>0.11.1</version>
+    <scope>runtime</scope>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-jackson</artifactId>
+    <version>0.11.1</version>
+    <scope>runtime</scope>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.9.0</version>
+</dependency>
+
+<dependency>
+            <groupId>dev.paseto</groupId>
+            <artifactId>jpaseto-api</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+        <!-- general implementation -->
+        <dependency>
+            <groupId>dev.paseto</groupId>
+            <artifactId>jpaseto-impl</artifactId>
+            <version>0.7.0</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- JSON parsing impl -->
+        <dependency>
+            <groupId>dev.paseto</groupId>
+            <artifactId>jpaseto-jackson</artifactId>
+            <version>0.7.0</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- crypto impl -->
+        <dependency>
+            <groupId>dev.paseto</groupId>
+            <artifactId>jpaseto-bouncy-castle</artifactId>
+            <version>0.7.0</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>dev.paseto</groupId>
+            <artifactId>jpaseto-sodium</artifactId>
+            <version>0.7.0</version>
+            <scope>runtime</scope>
+        </dependency>
+
 	</dependencies>
 
 	<build>
@@ -77,14 +138,6 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <classifier>exec</classifier>
-                </configuration>
-			</plugin>
-
 		</plugins>
 	</build>
 
